@@ -19,9 +19,8 @@
 				dt_cash - потрачно салярки
 				fio_cash - фио водителя
 				cash_zp - начислено зп
-Таблица: driver_zp
+Таблица: driver_zp_load
 	столбцы:  fio_zp - фио водителя
-				date_zp_load - дата рейза
+				date_zp_load - дата рейcа
 				zp_load - начислено зп
-				zp_paid - выплачено зп
-				zp_left - остаток зп
+				
