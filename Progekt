@@ -1,0 +1,21 @@
+Таблица: roads - рейсы
+	столбцы: date_load - дата загрузки
+			       Country_load - страна загрузки
+			       date_upload - дата выгрузки
+			       Country_upload - страна выгрузки
+			       Car_number - номер машины
+			       Fraht - стоимость перевозки
+			       Fraht_val - валюта
+			       Fio_driver - фио водителя
+Таблица: cash_table - расходы
+	столбцы:  date_load_cash - дата загрузки
+			        car_number_cash - номер машины
+				cash_load_euro - получено денег евро
+				cash_load_rub - получено денег рубли
+				cash_spent_euro - потрачено евро
+				cash_spent_rub - потрачено рублей
+				road_km_cash - пройденый километраж
+				gross_cash - вес груза
+				dt_cash - потрачно салярки
+				fio_cash - фио водителя
+				cash_zp - начислено зп 
