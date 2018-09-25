@@ -18,4 +18,10 @@
 				gross_cash - вес груза
 				dt_cash - потрачно салярки
 				fio_cash - фио водителя
-				cash_zp - начислено зп 
+				cash_zp - начислено зп
+Таблица: driver_zp
+	столбцы:  fio_zp - фио водителя
+				date_zp_load - дата рейза
+				zp_load - начислено зп
+				zp_paid - выплачено зп
+				zp_left - остаток зп
