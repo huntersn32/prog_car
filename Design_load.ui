@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Внесение данных в базу учета</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/truck.png</normaloff>icon/truck.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>50</width>
+    <height>50</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="TabReis">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icon/world.png</normaloff>icon/world.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Рейс</string>
+     </attribute>
+     <widget class="QPushButton" name="loadbtnReis">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>390</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Внести данные</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/pen.png</normaloff>icon/pen.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbLoad">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>40</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Россия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Греция</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Италия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Болгария</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Румыния</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Чехия</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Дата загрузки</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Страна загрузки</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>220</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Дата выгрузки</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbUpload">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>240</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Россия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Греция</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Италия</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Румыния</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Болгария</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Чехия</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>220</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Страна выгрузки</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbCarnumber">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>100</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>М416ОС / АМ 4275</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>М519НЕ / АМ 3711</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cmbDriverfio">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>100</y>
+        <width>241</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Маслов Андрей Васильевич</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Поснов Владимир Михайлович</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="lineCashdrive">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>240</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>220</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Стоимость перевозки</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbVal">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>240</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>RUB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EUR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>USD</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCalendarWidget" name="dateLoad">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>208</width>
+        <height>149</height>
+       </rect>
+      </property>
+      <property name="selectedDate">
+       <date>
+        <year>2018</year>
+        <month>9</month>
+        <day>12</day>
+       </date>
+      </property>
+     </widget>
+     <widget class="QCalendarWidget" name="dateUpload">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>208</width>
+        <height>149</height>
+       </rect>
+      </property>
+      <property name="selectedDate">
+       <date>
+        <year>2018</year>
+        <month>9</month>
+        <day>21</day>
+       </date>
+      </property>
+      <property name="gridVisible">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TabCash">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icon/banknote.png</normaloff>icon/banknote.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Расходы</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="TabDriver">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>icon/user.png</normaloff>icon/user.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Водитель</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
