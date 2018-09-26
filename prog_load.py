@@ -58,11 +58,11 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
         spentrub = self.cmbCashSpentRub.text() # потрачено руб
         cashKm = self.CashKm.text() # пройденный километраж
         grosscash = self.CashGross.text() # вес груза
-        esp = int(grosscash)*0,4
-        summa = (cashKm*esp)/100
-        self.lcdCash.intValue(summa)
-        print(summa)
-        rashodDT = summa
+        #esp = grosscash*0,4
+        #summa = cashKm*esp        
+        #self.lcdCash.intValue(summa)
+        
+        #rashodDT = summa
 
 def main():
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
