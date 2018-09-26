@@ -494,6 +494,75 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="loadbtnCash">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>400</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ввести данные</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/pen.png</normaloff>icon/pen.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>161</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Пройденый километраж</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>220</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Вес груза, тонн</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CashKm">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CashGross">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>240</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="TabDriver">
      <attribute name="icon">
