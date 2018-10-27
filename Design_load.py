@@ -203,7 +203,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.dateLoadcash.setCurrentIndex(1)
+        self.dateLoadcash.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -253,5 +253,5 @@ class Ui_MainWindow(object):
         self.label_16.setText(_translate("MainWindow", "ЗП за рейс"))
         self.label_17.setText(_translate("MainWindow", "Курс EURO"))
         self.dateLoadcash.setTabText(self.dateLoadcash.indexOf(self.TabCash), _translate("MainWindow", "Расходы"))
-        self.dateLoadcash.setTabText(self.dateLoadcash.indexOf(self.TabDriver), _translate("MainWindow", "Водитель"))
+        self.dateLoadcash.setTabText(self.dateLoadcash.indexOf(self.TabDriver), _translate("MainWindow", "Водители"))
 

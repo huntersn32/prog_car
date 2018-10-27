@@ -34,7 +34,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="iconSize">
      <size>
@@ -703,7 +703,7 @@
        <normaloff>icon/user.png</normaloff>icon/user.png</iconset>
      </attribute>
      <attribute name="title">
-      <string>Водитель</string>
+      <string>Водители</string>
      </attribute>
     </widget>
    </widget>
