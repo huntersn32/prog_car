@@ -650,6 +650,29 @@
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ЗП за рейс</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zp_cash">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="TabDriver">
      <attribute name="icon">

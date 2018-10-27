@@ -58,6 +58,7 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
         spentrub = int(self.cmbCashSpentRub.text()) # потрачено руб
         cashKm = int(self.CashKm.text()) # пройденный километраж
         grosscash = int(self.CashGross.text()) # вес груза
+        zp_cash = self.zp_cash.text()
         esp = grosscash*4/10 # расчет литров на 100км от веса тонн
         litr = esp+26 # расход кол-во литров на 100км
         summa_dt = int(litr*cashKm/100) # расход топлива ДТ
@@ -69,9 +70,21 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
         self.lcd_rub_lost.display(summa_rub) # вывод остатка руб на дисплей
         self.lcd_euro_lost.display(summa_eur) # вывод остатка евро на дисплей
         self.lcdCash.display(summa_dt) # вывод потраченого топлива на дисплей
+
+        conn = sqlite3.connect("test.db") # или :memory: чтобы сохранить в RAM
+        cursor = conn.cursor()
+        cursor.execute("""INSERT INTO cash_table(date_load_cash,car_number_cash,
+cash_load_euro,cash_load_rub,cash_spent_euro,cash_spent_rub,road_km_cash,gross_cash,
+dt_cash,fio_cash,cash_zp) VALUES(?,?,?,?,?,?,?,?,?,?,?)""",(dateload,carnumbercash,
+                                                            casheur,cash_rub,spenteuro,
+                                                            spentrub,cashKm,grosscash,
+                                                            summa_dt,fiocash,zp_cash)
+                       )
+        conn.commit()
+        conn.close()
+                                                            
         
         
-        #rashodDT = summa
 
 def main():
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
