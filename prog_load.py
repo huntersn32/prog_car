@@ -59,17 +59,42 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
         cashKm = int(self.CashKm.text()) # пройденный километраж
         grosscash = int(self.CashGross.text()) # вес груза
         zp_cash = self.zp_cash.text()
+        curs = int(self.curs_cash.text())
         esp = grosscash*4/10 # расчет литров на 100км от веса тонн
         litr = esp+26 # расход кол-во литров на 100км
+        if cash_rub == 0:
+            l = casheur*curs
+            l2 = l - spentrub 
+            casheur = l2 / curs
+            summa_rub = 0
+            print('евро в рублях:',l)
+            print('остаток евро в рублях:',l2)
+            print('остаток евро:',casheur)
+            print('рубли остаток:',summa_rub)
+            
+        else:
+            summa_rub = cash_rub-spentrub # остаток рублей
+
+        if cash_rub < spentrub:
+            l = casheur*curs
+            l3 = spentrub-cash_rub
+            l2 = l-l3
+            casheur = l2/curs
+            summa_rub = 0
+        else:
+            summa_rub = cash_rub-spentrub # остаток рублей
+
+            
         summa_dt = int(litr*cashKm/100) # расход топлива ДТ
         summa_eur = casheur-spenteuro # остаток евро
-        summa_rub = cash_rub-spentrub # остаток рублей
-        print(summa_rub) # проверка остатка рублей 
-        print(summa_eur) # проверка остатка евро
-        print(summa_dt) # проверка остатка ДТ
+        
+        print('осталось рублей:',summa_rub) # проверка остатка рублей 
+        print('осталось евро:',summa_eur) # проверка остатка евро
+        print('потрачено ДТ:',summa_dt) # проверка потраченого ДТ
         self.lcd_rub_lost.display(summa_rub) # вывод остатка руб на дисплей
         self.lcd_euro_lost.display(summa_eur) # вывод остатка евро на дисплей
         self.lcdCash.display(summa_dt) # вывод потраченого топлива на дисплей
+        
 
         conn = sqlite3.connect("test.db") # или :memory: чтобы сохранить в RAM
         cursor = conn.cursor()
