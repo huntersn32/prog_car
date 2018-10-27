@@ -52,15 +52,24 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
         dateload = dateload.toString('dd.MM.yyy')
         carnumbercash = self.cmb_car_cash.currentText() # номер машины
         fiocash = self.fiocmbCash.currentText() # ФИО водителя
-        casheur = self.cmbCashLoadEuro.text() # получено евро
-        cahsrub = self.cmbCashLoadRub.text() # получено рублей
-        spenteuro = self.cmbCashSpentEuro.text() # потрачено евро
-        spentrub = self.cmbCashSpentRub.text() # потрачено руб
-        cashKm = self.CashKm.text() # пройденный километраж
-        grosscash = self.CashGross.text() # вес груза
-        #esp = grosscash*0,4
-        #summa = cashKm*esp        
-        #self.lcdCash.intValue(summa)
+        casheur = int(self.cmbCashLoadEuro.text()) # получено евро
+        cash_rub = int(self.cmbCashLoadRub.text()) # получено рублей
+        spenteuro = int(self.cmbCashSpentEuro.text()) # потрачено евро
+        spentrub = int(self.cmbCashSpentRub.text()) # потрачено руб
+        cashKm = int(self.CashKm.text()) # пройденный километраж
+        grosscash = int(self.CashGross.text()) # вес груза
+        esp = grosscash*4/10 # расчет литров на 100км от веса тонн
+        litr = esp+26 # расход кол-во литров на 100км
+        summa_dt = int(litr*cashKm/100) # расход топлива ДТ
+        summa_eur = casheur-spenteuro # остаток евро
+        summa_rub = cash_rub-spentrub # остаток рублей
+        print(summa_rub) # проверка остатка рублей 
+        print(summa_eur) # проверка остатка евро
+        print(summa_dt) # проверка остатка ДТ
+        self.lcd_rub_lost.display(summa_rub) # вывод остатка руб на дисплей
+        self.lcd_euro_lost.display(summa_eur) # вывод остатка евро на дисплей
+        self.lcdCash.display(summa_dt) # вывод потраченого топлива на дисплей
+        
         
         #rashodDT = summa
 
