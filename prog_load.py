@@ -1,8 +1,8 @@
 import sys  # sys нужен для передачи argv в QApplication
 from PyQt5 import QtWidgets
 import Design_load  # Это конвертированный файл дизайна
-import sqlite3
-from datetime import datetime
+import sqlite3 # подключаем модуль sql
+from datetime import datetime # для работы с календарем
 
 class ExampleApp(QtWidgets.QMainWindow, Design_load.Ui_MainWindow):
     def __init__(self):
