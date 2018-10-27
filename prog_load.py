@@ -49,7 +49,7 @@ Counry_upload,Car_number,Fraht,Fraht_val,Fio_driver)
 
     def load_Db_cash(self):
         dateload = self.dateLoadCash.selectedDate() # Дата загрузки
-        dateload = dateload.toString('dd.MM.yyy')
+        dateload = dateload.toString('dd.MM.yyyy')
         carnumbercash = self.cmb_car_cash.currentText() # номер машины
         fiocash = self.fiocmbCash.currentText() # ФИО водителя
         casheur = int(self.cmbCashLoadEuro.text()) # получено евро
